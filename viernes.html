@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Viernes | Rutina Gym</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <div class="container">
+    <header class="hero hero-small">
+      <p class="eyebrow">Viernes</p>
+      <h1>Pull — Día 2</h1>
+      <p class="hero-text">
+        Segundo día de tirón, con más sesgo a espalda alta y deltoide posterior, manteniendo también trabajo directo de bíceps.
+      </p>
+
+      <div class="actions">
+        <a class="btn secondary" href="index.html">Volver al inicio</a>
+        <a class="btn" href="#temporizador">Ir al temporizador</a>
+      </div>
+    </header>
+
+    <section class="section card">
+      <h2>Resumen del día</h2>
+      <div class="badges">
+        <span class="badge">Duración: 70-90 min</span>
+        <span class="badge">Énfasis: espalda alta + bíceps</span>
+        <span class="badge">RPE general: 8-9</span>
+      </div>
+      <p class="muted" style="margin-top: 12px;">
+        Idea general: mantener un tirón vertical, dar protagonismo a la densidad de espalda con remo en T y completar con deltoide posterior y bíceps.
+      </p>
+    </section>
+
+    <section class="section card">
+      <h2>Calentamiento específico</h2>
+
+      <h3>General</h3>
+      <ul>
+        <li>5-8 minutos de cardio suave</li>
+        <li>Remo, bici o cinta suave</li>
+      </ul>
+
+      <h3 style="margin-top: 18px;">Movilidad y activación</h3>
+      <ul>
+        <li>Movilidad escapular y hombro: 1-2 rondas</li>
+        <li>Reverse pec deck o banda ligera: 1-2 series suaves</li>
+        <li>1-2 series ligeras del primer tirón</li>
+      </ul>
+
+      <div class="note">
+        Llega al primer ejercicio con hombros calientes, escápulas activas y el torso estable.
+      </div>
+    </section>
+
+    <section class="section card">
+      <h2>Ejercicios</h2>
+
+      <article class="exercise">
+        <img src="img/viernes/dominadas-asistidas.gif" alt="Dominadas asistidas">
+        <div>
+          <h3>1. Dominadas asistidas</h3>
+          <div class="meta">
+            <span class="pill">3-4 series</span>
+            <span class="pill">6-10 reps</span>
+            <span class="pill">90-120 s</span>
+          </div>
+          <p>
+            Tirón vertical principal del día, muy bueno para dorsales y fuerza general de espalda.
+          </p>
+          <div class="note">
+            <strong>Técnica clave:</strong> hombros abajo, pecho alto y subida controlada sin impulso.
+          </div>
+          <div class="note">
+            <strong>Tip:</strong> piensa en llevar los codos hacia el costado, no solo en subir el cuerpo.
+          </div>
+          <div class="warning">
+            <strong>Error común:</strong> columpiarte o perder tensión escapular al inicio.
+          </div>
+
+          <div class="log-box">
+            <h4>Registro</h4>
+            <div class="log-form">
+              <input type="number" id="viernes-dominadas-peso" placeholder="Asistencia / peso" step="0.5">
+              <input type="number" id="viernes-dominadas-reps" placeholder="Reps">
+              <input type="text" id="viernes-dominadas-nota" placeholder="Nota rápida">
+            </div>
+
+            <div class="log-actions">
+              <button class="timer-btn primary" onclick="saveExerciseLog('viernes-dominadas')">Guardar</button>
+              <button class="timer-btn" onclick="clearExerciseLog('viernes-dominadas')">Borrar</button>
+            </div>
+
+            <div class="saved-log" id="viernes-dominadas-output">
+              Sin registro guardado todavía.
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <article class="exercise">
+        <img src="img/viernes/remo-t.gif" alt="Remo en T">
+        <div>
+          <h3>2. Remo en T</h3>
+          <div class="meta">
+            <span class="pill">3-4 series</span>
+            <span class="pill">8-12 reps</span>
+            <span class="pill">90-120 s</span>
+          </div>
+          <p>
+            Muy buen remo para densidad de espalda media/alta y trabajo general del tirón horizontal.
+          </p>
+          <div class="note">
+            <strong>Técnica clave:</strong> torso firme, pecho abierto y tirón limpio con los codos.
+          </div>
+          <div class="note">
+            <strong>Tip:</strong> controla el recorrido y evita convertirlo en un balanceo de lumbar.
+          </div>
+          <div class="warning">
+            <strong>Error común:</strong> meter demasiado peso y perder estabilidad o recorrido.
+          </div>
+
+          <div class="log-box">
+            <h4>Registro</h4>
+            <div class="log-form">
+              <input type="number" id="viernes-remot-peso" placeholder="Peso (kg)" step="0.5">
+              <input type="number" id="viernes-remot-reps" placeholder="Reps">
+              <input type="text" id="viernes-remot-nota" placeholder="Nota rápida">
+            </div>
+
+            <div class="log-actions">
+              <button class="timer-btn primary" onclick="saveExerciseLog('viernes-remot')">Guardar</button>
+              <button class="timer-btn" onclick="clearExerciseLog('viernes-remot')">Borrar</button>
+            </div>
+
+            <div class="saved-log" id="viernes-remot-output">
+              Sin registro guardado todavía.
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <article class="exercise">
+        <img src="img/viernes/reverse-pec-deck.gif" alt="Reverse pec deck">
+        <div>
+          <h3>3. Reverse pec deck</h3>
+          <div class="meta">
+            <span class="pill">3 series</span>
+            <span class="pill">12-15 reps</span>
+            <span class="pill">60-75 s</span>
+          </div>
+          <p>
+            Trabajo muy bueno y estable para deltoide posterior y parte alta de la espalda.
+          </p>
+          <div class="note">
+            <strong>Técnica clave:</strong> movimiento controlado, hombros bajos y apertura limpia sin impulso.
+          </div>
+          <div class="note">
+            <strong>Tip:</strong> busca sentir la parte posterior del hombro más que mover mucho peso.
+          </div>
+          <div class="warning">
+            <strong>Error común:</strong> sacar pecho de forma exagerada o hacer rebotes con el torso.
+          </div>
+
+          <div class="log-box">
+            <h4>Registro</h4>
+            <div class="log-form">
+              <input type="number" id="viernes-reverse-peso" placeholder="Peso (kg)" step="0.5">
+              <input type="number" id="viernes-reverse-reps" placeholder="Reps">
+              <input type="text" id="viernes-reverse-nota" placeholder="Nota rápida">
+            </div>
+
+            <div class="log-actions">
+              <button class="timer-btn primary" onclick="saveExerciseLog('viernes-reverse')">Guardar</button>
+              <button class="timer-btn" onclick="clearExerciseLog('viernes-reverse')">Borrar</button>
+            </div>
+
+            <div class="saved-log" id="viernes-reverse-output">
+              Sin registro guardado todavía.
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <article class="exercise">
+        <img src="img/viernes/curl-polea-baja.gif" alt="Curl en polea bilateral">
+        <div>
+          <h3>4. Curl en polea bilateral</h3>
+          <div class="meta">
+            <span class="pill">3 series</span>
+            <span class="pill">10-12 reps</span>
+            <span class="pill">60-75 s</span>
+          </div>
+          <p>
+            Curl muy estable y con tensión continua, ideal para trabajo directo de bíceps.
+          </p>
+          <div class="note">
+            <strong>Técnica clave:</strong> codos relativamente fijos, hombros quietos y recorrido controlado.
+          </div>
+          <div class="note">
+            <strong>Tip:</strong> aprovecha la tensión constante de la polea; no hace falta mucho peso.
+          </div>
+          <div class="warning">
+            <strong>Error común:</strong> llevar los codos hacia delante o balancear el cuerpo.
+          </div>
+
+          <div class="log-box">
+            <h4>Registro</h4>
+            <div class="log-form">
+              <input type="number" id="viernes-polea-peso" placeholder="Peso (kg)" step="0.5">
+              <input type="number" id="viernes-polea-reps" placeholder="Reps">
+              <input type="text" id="viernes-polea-nota" placeholder="Nota rápida">
+            </div>
+
+            <div class="log-actions">
+              <button class="timer-btn primary" onclick="saveExerciseLog('viernes-polea')">Guardar</button>
+              <button class="timer-btn" onclick="clearExerciseLog('viernes-polea')">Borrar</button>
+            </div>
+
+            <div class="saved-log" id="viernes-polea-output">
+              Sin registro guardado todavía.
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <article class="exercise">
+        <img src="img/viernes/curl-inclinado.gif" alt="Curl inclinado">
+        <div>
+          <h3>5. Curl inclinado</h3>
+          <div class="meta">
+            <span class="pill">2-3 series</span>
+            <span class="pill">10-12 reps</span>
+            <span class="pill">60-75 s</span>
+          </div>
+          <p>
+            Muy buen complemento del curl en polea para trabajar el bíceps en una posición de más estiramiento.
+          </p>
+          <div class="note">
+            <strong>Técnica clave:</strong> hombros atrás, brazos colgando estables y subida sin impulso.
+          </div>
+          <div class="note">
+            <strong>Tip:</strong> mantén el hombro quieto y deja que el bíceps haga el trabajo.
+          </div>
+          <div class="warning">
+            <strong>Error común:</strong> adelantar demasiado los codos o balancearte para terminar la repetición.
+          </div>
+
+          <div class="log-box">
+            <h4>Registro</h4>
+            <div class="log-form">
+              <input type="number" id="viernes-inclinado-peso" placeholder="Peso (kg)" step="0.5">
+              <input type="number" id="viernes-inclinado-reps" placeholder="Reps">
+              <input type="text" id="viernes-inclinado-nota" placeholder="Nota rápida">
+            </div>
+
+            <div class="log-actions">
+              <button class="timer-btn primary" onclick="saveExerciseLog('viernes-inclinado')">Guardar</button>
+              <button class="timer-btn" onclick="clearExerciseLog('viernes-inclinado')">Borrar</button>
+            </div>
+
+            <div class="saved-log" id="viernes-inclinado-output">
+              Sin registro guardado todavía.
+            </div>
+          </div>
+        </div>
+      </article>
+    </section>
+
+    <section class="section card">
+      <h2>Notas del día</h2>
+      <ul>
+        <li>Este día da más protagonismo a espalda alta y deltoide posterior que el martes.</li>
+        <li>El remo en T debe ser exigente, pero sin perder postura ni convertirlo en una trampa lumbar.</li>
+        <li>Los dos curls se complementan bien: uno con tensión continua y otro con más estiramiento.</li>
+      </ul>
+    </section>
+
+    <section id="temporizador" class="section card timer-box">
+      <h2>Temporizador de descanso</h2>
+      <p class="muted">Botones rápidos para 60, 90, 120 y 180 segundos.</p>
+
+      <div class="timer-display" id="timer">01:30</div>
+
+      <div class="timer-controls">
+        <button class="timer-btn" onclick="setTimer(60)">60 s</button>
+        <button class="timer-btn" onclick="setTimer(90)">90 s</button>
+        <button class="timer-btn" onclick="setTimer(120)">120 s</button>
+        <button class="timer-btn" onclick="setTimer(180)">180 s</button>
+        <button class="timer-btn primary" onclick="startTimer()">Iniciar</button>
+        <button class="timer-btn" onclick="pauseTimer()">Pausar</button>
+        <button class="timer-btn" onclick="resetTimer()">Reset</button>
+      </div>
+    </section>
+  </div>
+</body>
+</html>

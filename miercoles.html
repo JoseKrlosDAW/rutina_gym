@@ -17,7 +17,7 @@
       <h1>Pierna — Día 1</h1>
       <p class="hero-text">
         Énfasis en cuádriceps. Día centrado en fuerza y masa muscular, con trabajo principal de
-        sentadilla, volumen en prensa, unilateral, aislamiento, aductores y gemelos.
+        sentadilla, volumen en prensa, unilateral, aislamiento de cuádriceps, un recordatorio de femoral y gemelos.
       </p>
 
       <div class="actions">
@@ -62,7 +62,7 @@
       </ul>
 
       <div class="note">
-        La idea no es fatigarte, sino llegar a la sentadilla con rodillas, tobillos y cadera preparados,
+        La idea no es fatigarte, sino llegar a la sentadilla con rodillas, tobillos y cadera preparadas,
         y con el patrón de movimiento ya activado.
       </div>
     </section>
@@ -70,49 +70,49 @@
     <section class="section card">
       <h2>Ejercicios</h2>
 
-<article class="exercise">
-  <img src="img/miercoles/sentadilla-barra.gif" alt="Sentadilla con barra">
-  <div>
-    <h3>1. Sentadilla con barra</h3>
-    <div class="meta">
-      <span class="pill">3-4 series</span>
-      <span class="pill">6-10 reps</span>
-      <span class="pill">2-3 min</span>
-    </div>
-    <p>
-      El básico principal del día. Ejercicio clave para ganar fuerza y masa muscular en pierna.
-    </p>
-    <div class="note">
-      <strong>Técnica clave:</strong> pies firmes, torso lo más vertical posible dentro de tu mecánica,
-      bajada controlada y buena profundidad si puedes mantener postura.
-    </div>
-    <div class="note">
-      <strong>Tip:</strong> busca que el cuádriceps trabaje en estiramiento, no solo mover peso.
-    </div>
-    <div class="warning">
-      <strong>Error común:</strong> inclinar demasiado el torso, perder estabilidad en los pies
-      o subir con la cadera antes que con el pecho.
-    </div>
+      <article class="exercise">
+        <img src="img/miercoles/sentadilla-barra.gif" alt="Sentadilla con barra">
+        <div>
+          <h3>1. Sentadilla con barra</h3>
+          <div class="meta">
+            <span class="pill">3-4 series</span>
+            <span class="pill">6-10 reps</span>
+            <span class="pill">2-3 min</span>
+          </div>
+          <p>
+            El básico principal del día. Ejercicio clave para ganar fuerza y masa muscular en pierna.
+          </p>
+          <div class="note">
+            <strong>Técnica clave:</strong> pies firmes, torso lo más vertical posible dentro de tu mecánica,
+            bajada controlada y buena profundidad si puedes mantener postura.
+          </div>
+          <div class="note">
+            <strong>Tip:</strong> busca que el cuádriceps trabaje en estiramiento, no solo mover peso.
+          </div>
+          <div class="warning">
+            <strong>Error común:</strong> inclinar demasiado el torso, perder estabilidad en los pies
+            o subir con la cadera antes que con el pecho.
+          </div>
 
-    <div class="log-box">
-      <h4>Registro</h4>
-      <div class="log-form">
-        <input type="number" id="sentadilla-peso" placeholder="Peso (kg)" step="0.5">
-        <input type="number" id="sentadilla-reps" placeholder="Reps">
-        <input type="text" id="sentadilla-nota" placeholder="Nota rápida">
-      </div>
+          <div class="log-box">
+            <h4>Registro</h4>
+            <div class="log-form">
+              <input type="number" id="sentadilla-peso" placeholder="Peso (kg)" step="0.5">
+              <input type="number" id="sentadilla-reps" placeholder="Reps">
+              <input type="text" id="sentadilla-nota" placeholder="Nota rápida">
+            </div>
 
-      <div class="log-actions">
-        <button class="timer-btn primary" onclick="saveExerciseLog('sentadilla')">Guardar</button>
-        <button class="timer-btn" onclick="clearExerciseLog('sentadilla')">Borrar</button>
-      </div>
+            <div class="log-actions">
+              <button class="timer-btn primary" onclick="saveExerciseLog('sentadilla')">Guardar</button>
+              <button class="timer-btn" onclick="clearExerciseLog('sentadilla')">Borrar</button>
+            </div>
 
-      <div class="saved-log" id="sentadilla-output">
-        Sin registro guardado todavía.
-      </div>
-    </div>
-  </div>
-</article>
+            <div class="saved-log" id="sentadilla-output">
+              Sin registro guardado todavía.
+            </div>
+          </div>
+        </div>
+      </article>
 
       <article class="exercise">
         <img src="img/miercoles/prensa.gif" alt="Prensa de piernas">
@@ -138,13 +138,31 @@
             <strong>Error común:</strong> despegar la lumbar del respaldo, meter demasiado peso
             o hacer un recorrido demasiado corto.
           </div>
+
+          <div class="log-box">
+            <h4>Registro</h4>
+            <div class="log-form">
+              <input type="number" id="prensa-peso" placeholder="Peso (kg)" step="0.5">
+              <input type="number" id="prensa-reps" placeholder="Reps">
+              <input type="text" id="prensa-nota" placeholder="Nota rápida">
+            </div>
+
+            <div class="log-actions">
+              <button class="timer-btn primary" onclick="saveExerciseLog('prensa')">Guardar</button>
+              <button class="timer-btn" onclick="clearExerciseLog('prensa')">Borrar</button>
+            </div>
+
+            <div class="saved-log" id="prensa-output">
+              Sin registro guardado todavía.
+            </div>
+          </div>
         </div>
       </article>
 
       <article class="exercise">
-        <img src="img/miercoles/zancadas-bulgara.gif" alt="Zancadas o sentadilla búlgara">
+        <img src="img/miercoles/zancadas-bulgara.gif" alt="Sentadilla búlgara">
         <div>
-          <h3>3. Zancadas o sentadilla búlgara</h3>
+          <h3>3. Sentadilla búlgara</h3>
           <div class="meta">
             <span class="pill">3 series por pierna</span>
             <span class="pill">10-12 reps</span>
@@ -163,6 +181,24 @@
           <div class="warning">
             <strong>Error común:</strong> impulsarte demasiado con la pierna trasera, perder equilibrio
             o ir demasiado rápido.
+          </div>
+
+          <div class="log-box">
+            <h4>Registro</h4>
+            <div class="log-form">
+              <input type="number" id="bulgara-peso" placeholder="Peso (kg)" step="0.5">
+              <input type="number" id="bulgara-reps" placeholder="Reps">
+              <input type="text" id="bulgara-nota" placeholder="Nota rápida">
+            </div>
+
+            <div class="log-actions">
+              <button class="timer-btn primary" onclick="saveExerciseLog('bulgara')">Guardar</button>
+              <button class="timer-btn" onclick="clearExerciseLog('bulgara')">Borrar</button>
+            </div>
+
+            <div class="saved-log" id="bulgara-output">
+              Sin registro guardado todavía.
+            </div>
           </div>
         </div>
       </article>
@@ -188,30 +224,65 @@
           <div class="warning">
             <strong>Error común:</strong> usar inercias, balancear el cuerpo o hacer la bajada demasiado rápida.
           </div>
+
+          <div class="log-box">
+            <h4>Registro</h4>
+            <div class="log-form">
+              <input type="number" id="extensiones-peso" placeholder="Peso (kg)" step="0.5">
+              <input type="number" id="extensiones-reps" placeholder="Reps">
+              <input type="text" id="extensiones-nota" placeholder="Nota rápida">
+            </div>
+
+            <div class="log-actions">
+              <button class="timer-btn primary" onclick="saveExerciseLog('extensiones')">Guardar</button>
+              <button class="timer-btn" onclick="clearExerciseLog('extensiones')">Borrar</button>
+            </div>
+
+            <div class="saved-log" id="extensiones-output">
+              Sin registro guardado todavía.
+            </div>
+          </div>
         </div>
       </article>
 
       <article class="exercise">
-        <img src="img/miercoles/aductores-maquina.gif" alt="Aductores en máquina">
+        <img src="img/miercoles/curl-femoral.gif" alt="Curl femoral">
         <div>
-          <h3>5. Aductores en máquina</h3>
+          <h3>5. Curl femoral</h3>
           <div class="meta">
             <span class="pill">2-3 series</span>
-            <span class="pill">12-15 reps</span>
-            <span class="pill">60 s</span>
+            <span class="pill">10-15 reps</span>
+            <span class="pill">60-90 s</span>
           </div>
           <p>
-            Complemento para la parte interna de la pierna.
+            Recordatorio de isquios para que la semana quede más equilibrada, sin quitar protagonismo al trabajo de cuádriceps del día.
           </p>
           <div class="note">
-            <strong>Técnica clave:</strong> controla tanto la apertura como el cierre y mantén tensión
-            durante todo el recorrido.
+            <strong>Técnica clave:</strong> controla el recorrido completo, sin tirones y sin perder tensión al bajar.
           </div>
           <div class="note">
-            <strong>Tip:</strong> no golpees las placas y busca sentir tanto estiramiento como contracción.
+            <strong>Tip:</strong> aquí interesa más sentir el femoral que mover mucho peso.
           </div>
           <div class="warning">
-            <strong>Error común:</strong> hacer repeticiones demasiado cortas o cerrar rápido por inercia.
+            <strong>Error común:</strong> acelerar demasiado la serie o dejar caer el peso sin control.
+          </div>
+
+          <div class="log-box">
+            <h4>Registro</h4>
+            <div class="log-form">
+              <input type="number" id="femoral-peso" placeholder="Peso (kg)" step="0.5">
+              <input type="number" id="femoral-reps" placeholder="Reps">
+              <input type="text" id="femoral-nota" placeholder="Nota rápida">
+            </div>
+
+            <div class="log-actions">
+              <button class="timer-btn primary" onclick="saveExerciseLog('femoral')">Guardar</button>
+              <button class="timer-btn" onclick="clearExerciseLog('femoral')">Borrar</button>
+            </div>
+
+            <div class="saved-log" id="femoral-output">
+              Sin registro guardado todavía.
+            </div>
           </div>
         </div>
       </article>
@@ -237,6 +308,24 @@
           <div class="warning">
             <strong>Error común:</strong> hacer medio recorrido o rebotar en la parte baja.
           </div>
+
+          <div class="log-box">
+            <h4>Registro</h4>
+            <div class="log-form">
+              <input type="number" id="gemelo-peso" placeholder="Peso (kg)" step="0.5">
+              <input type="number" id="gemelo-reps" placeholder="Reps">
+              <input type="text" id="gemelo-nota" placeholder="Nota rápida">
+            </div>
+
+            <div class="log-actions">
+              <button class="timer-btn primary" onclick="saveExerciseLog('gemelo')">Guardar</button>
+              <button class="timer-btn" onclick="clearExerciseLog('gemelo')">Borrar</button>
+            </div>
+
+            <div class="saved-log" id="gemelo-output">
+              Sin registro guardado todavía.
+            </div>
+          </div>
         </div>
       </article>
     </section>
@@ -245,7 +334,7 @@
       <h2>Notas del día</h2>
       <ul>
         <li>El orden del entrenamiento está pensado para ir de más demandante a más analítico.</li>
-        <li>No hace falta meter más ejercicios; así ya está bien equilibrado.</li>
+        <li>Este día sigue siendo claramente dominante de cuádriceps, aunque ahora incluye un pequeño recordatorio de femoral.</li>
         <li>Cuando completes el rango alto de repeticiones con buena técnica, sube un poco el peso en la siguiente sesión.</li>
         <li>Como es un día con bastante carga de rodilla y cuádriceps, no te vacíes demasiado pronto en la sentadilla.</li>
       </ul>

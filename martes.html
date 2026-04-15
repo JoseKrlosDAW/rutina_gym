@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Martes | Rutina Gym</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <div class="container">
+    <header class="hero hero-small">
+      <p class="eyebrow">Martes</p>
+      <h1>Pull — Día 1</h1>
+      <p class="hero-text">
+        Día de tirón con más sesgo a dorsales y base de espalda. Trabajo de jalón, remo,
+        estabilidad escapular y bíceps.
+      </p>
+
+      <div class="actions">
+        <a class="btn secondary" href="index.html">Volver al inicio</a>
+        <a class="btn" href="#temporizador">Ir al temporizador</a>
+      </div>
+    </header>
+
+    <section class="section card">
+      <h2>Resumen del día</h2>
+      <div class="badges">
+        <span class="badge">Duración: 70-90 min</span>
+        <span class="badge">Énfasis: dorsales + bíceps</span>
+        <span class="badge">RPE general: 8-9</span>
+      </div>
+      <p class="muted" style="margin-top: 12px;">
+        Idea general: construir una buena base de tirón con un vertical, un horizontal, trabajo escapular y dos curls que se complementen.
+      </p>
+    </section>
+
+    <section class="section card">
+      <h2>Calentamiento específico</h2>
+
+      <h3>General</h3>
+      <ul>
+        <li>5-8 minutos de cardio suave</li>
+        <li>Remo, bici o cinta suave</li>
+      </ul>
+
+      <h3 style="margin-top: 18px;">Movilidad y activación</h3>
+      <ul>
+        <li>Movilidad escapular y hombro: 1-2 rondas</li>
+        <li>Face pull muy ligero o banda: 2 x 15</li>
+        <li>1-2 series ligeras de jalón o remo antes de empezar</li>
+      </ul>
+
+      <div class="note">
+        Busca llegar al primer tirón con hombros colocados, escápulas activas y sensación de control, no con fatiga.
+      </div>
+    </section>
+
+    <section class="section card">
+      <h2>Ejercicios</h2>
+
+      <article class="exercise">
+        <img src="img/martes/jalon-pecho.gif" alt="Jalón al pecho">
+        <div>
+          <h3>1. Jalón al pecho</h3>
+          <div class="meta">
+            <span class="pill">3-4 series</span>
+            <span class="pill">8-12 reps</span>
+            <span class="pill">90-120 s</span>
+          </div>
+          <p>
+            Tirón vertical base del día, muy bueno para dorsales y trabajo general de espalda.
+          </p>
+          <div class="note">
+            <strong>Técnica clave:</strong> saca pecho, baja hombros y lleva los codos hacia abajo con control.
+          </div>
+          <div class="note">
+            <strong>Tip:</strong> piensa en tirar con los codos, no solo con las manos.
+          </div>
+          <div class="warning">
+            <strong>Error común:</strong> echarte demasiado hacia atrás y convertirlo en una especie de remo.
+          </div>
+
+          <div class="log-box">
+            <h4>Registro</h4>
+            <div class="log-form">
+              <input type="number" id="martes-jalon-peso" placeholder="Peso (kg)" step="0.5">
+              <input type="number" id="martes-jalon-reps" placeholder="Reps">
+              <input type="text" id="martes-jalon-nota" placeholder="Nota rápida">
+            </div>
+
+            <div class="log-actions">
+              <button class="timer-btn primary" onclick="saveExerciseLog('martes-jalon')">Guardar</button>
+              <button class="timer-btn" onclick="clearExerciseLog('martes-jalon')">Borrar</button>
+            </div>
+
+            <div class="saved-log" id="martes-jalon-output">
+              Sin registro guardado todavía.
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <article class="exercise">
+        <img src="img/martes/remo-horizontal.gif" alt="Remo horizontal">
+        <div>
+          <h3>2. Remo horizontal</h3>
+          <div class="meta">
+            <span class="pill">3-4 series</span>
+            <span class="pill">8-12 reps</span>
+            <span class="pill">90-120 s</span>
+          </div>
+          <p>
+            Tirón horizontal para espalda media, dorsales y control escapular.
+          </p>
+          <div class="note">
+            <strong>Técnica clave:</strong> torso estable, pecho abierto y tirón limpio hacia abdomen o cintura.
+          </div>
+          <div class="note">
+            <strong>Tip:</strong> inicia el movimiento con espalda, no solo flexionando los codos.
+          </div>
+          <div class="warning">
+            <strong>Error común:</strong> balancear el tronco o acortar recorrido por demasiado peso.
+          </div>
+
+          <div class="log-box">
+            <h4>Registro</h4>
+            <div class="log-form">
+              <input type="number" id="martes-remo-peso" placeholder="Peso (kg)" step="0.5">
+              <input type="number" id="martes-remo-reps" placeholder="Reps">
+              <input type="text" id="martes-remo-nota" placeholder="Nota rápida">
+            </div>
+
+            <div class="log-actions">
+              <button class="timer-btn primary" onclick="saveExerciseLog('martes-remo')">Guardar</button>
+              <button class="timer-btn" onclick="clearExerciseLog('martes-remo')">Borrar</button>
+            </div>
+
+            <div class="saved-log" id="martes-remo-output">
+              Sin registro guardado todavía.
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <article class="exercise">
+        <img src="img/martes/face-pull.gif" alt="Face pull">
+        <div>
+          <h3>3. Face pull</h3>
+          <div class="meta">
+            <span class="pill">3 series</span>
+            <span class="pill">12-15 reps</span>
+            <span class="pill">60-75 s</span>
+          </div>
+          <p>
+            Trabajo muy útil para deltoide posterior, estabilidad escapular y salud del hombro.
+          </p>
+          <div class="note">
+            <strong>Técnica clave:</strong> tira hacia la cara, con codos altos y control de la vuelta.
+          </div>
+          <div class="note">
+            <strong>Tip:</strong> piensa en separar las manos al final del gesto.
+          </div>
+          <div class="warning">
+            <strong>Error común:</strong> tirar al pecho en vez de a la cara o usar demasiado peso.
+          </div>
+
+          <div class="log-box">
+            <h4>Registro</h4>
+            <div class="log-form">
+              <input type="number" id="martes-facepull-peso" placeholder="Peso (kg)" step="0.5">
+              <input type="number" id="martes-facepull-reps" placeholder="Reps">
+              <input type="text" id="martes-facepull-nota" placeholder="Nota rápida">
+            </div>
+
+            <div class="log-actions">
+              <button class="timer-btn primary" onclick="saveExerciseLog('martes-facepull')">Guardar</button>
+              <button class="timer-btn" onclick="clearExerciseLog('martes-facepull')">Borrar</button>
+            </div>
+
+            <div class="saved-log" id="martes-facepull-output">
+              Sin registro guardado todavía.
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <article class="exercise">
+        <img src="img/martes/curl-polea-bayesian.gif" alt="Curl en polea tipo bayesian">
+        <div>
+          <h3>4. Curl en polea tipo bayesian</h3>
+          <div class="meta">
+            <span class="pill">3 series</span>
+            <span class="pill">10-12 reps</span>
+            <span class="pill">60-75 s</span>
+          </div>
+          <p>
+            Curl unilateral en polea con mucha tensión en estiramiento, muy bueno para bíceps.
+          </p>
+          <div class="note">
+            <strong>Técnica clave:</strong> hombro estable, brazo ligeramente retrasado y codo relativamente fijo.
+          </div>
+          <div class="note">
+            <strong>Tip:</strong> aprovecha el estiramiento abajo y controla mucho la bajada.
+          </div>
+          <div class="warning">
+            <strong>Error común:</strong> adelantar el hombro o mover el codo hacia delante para ayudarte.
+          </div>
+
+          <div class="log-box">
+            <h4>Registro</h4>
+            <div class="log-form">
+              <input type="number" id="martes-bayesian-peso" placeholder="Peso (kg)" step="0.5">
+              <input type="number" id="martes-bayesian-reps" placeholder="Reps">
+              <input type="text" id="martes-bayesian-nota" placeholder="Nota rápida">
+            </div>
+
+            <div class="log-actions">
+              <button class="timer-btn primary" onclick="saveExerciseLog('martes-bayesian')">Guardar</button>
+              <button class="timer-btn" onclick="clearExerciseLog('martes-bayesian')">Borrar</button>
+            </div>
+
+            <div class="saved-log" id="martes-bayesian-output">
+              Sin registro guardado todavía.
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <article class="exercise">
+        <img src="img/martes/curl-martillo.gif" alt="Curl martillo">
+        <div>
+          <h3>5. Curl martillo</h3>
+          <div class="meta">
+            <span class="pill">2-3 series</span>
+            <span class="pill">10-12 reps</span>
+            <span class="pill">60-75 s</span>
+          </div>
+          <p>
+            Muy buen complemento del curl anterior, con más énfasis en braquial y braquiorradial.
+          </p>
+          <div class="note">
+            <strong>Técnica clave:</strong> agarre neutro, codos estables y recorrido limpio.
+          </div>
+          <div class="note">
+            <strong>Tip:</strong> no balancees el cuerpo; mejor menos peso y más control.
+          </div>
+          <div class="warning">
+            <strong>Error común:</strong> hacer trampas con la espalda o encoger los hombros.
+          </div>
+
+          <div class="log-box">
+            <h4>Registro</h4>
+            <div class="log-form">
+              <input type="number" id="martes-martillo-peso" placeholder="Peso (kg)" step="0.5">
+              <input type="number" id="martes-martillo-reps" placeholder="Reps">
+              <input type="text" id="martes-martillo-nota" placeholder="Nota rápida">
+            </div>
+
+            <div class="log-actions">
+              <button class="timer-btn primary" onclick="saveExerciseLog('martes-martillo')">Guardar</button>
+              <button class="timer-btn" onclick="clearExerciseLog('martes-martillo')">Borrar</button>
+            </div>
+
+            <div class="saved-log" id="martes-martillo-output">
+              Sin registro guardado todavía.
+            </div>
+          </div>
+        </div>
+      </article>
+    </section>
+
+    <section class="section card">
+      <h2>Notas del día</h2>
+      <ul>
+        <li>Este día da más protagonismo al tirón vertical y a la base de dorsales.</li>
+        <li>No hace falta ir pesado en face pull; interesa más la técnica y el control.</li>
+        <li>Los dos curls se complementan bien: uno más de estiramiento y otro más de braquial/braquiorradial.</li>
+      </ul>
+    </section>
+
+    <section id="temporizador" class="section card timer-box">
+      <h2>Temporizador de descanso</h2>
+      <p class="muted">Botones rápidos para 60, 90, 120 y 180 segundos.</p>
+
+      <div class="timer-display" id="timer">01:30</div>
+
+      <div class="timer-controls">
+        <button class="timer-btn" onclick="setTimer(60)">60 s</button>
+        <button class="timer-btn" onclick="setTimer(90)">90 s</button>
+        <button class="timer-btn" onclick="setTimer(120)">120 s</button>
+        <button class="timer-btn" onclick="setTimer(180)">180 s</button>
+        <button class="timer-btn primary" onclick="startTimer()">Iniciar</button>
+        <button class="timer-btn" onclick="pauseTimer()">Pausar</button>
+        <button class="timer-btn" onclick="resetTimer()">Reset</button>
+      </div>
+    </section>
+  </div>
+</body>
+</html>

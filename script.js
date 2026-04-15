@@ -116,14 +116,40 @@ function clearExerciseLog(exerciseKey) {
 document.addEventListener("DOMContentLoaded", () => {
   updateDisplay();
 
-  const exercises = [
-    "sentadilla",
-    "prensa",
-    "bulgara",
-    "extensiones",
-    "aductores",
-    "gemelo"
-  ];
+const exercises = [
+  "lunes-banca",
+  "lunes-inclinado",
+  "lunes-militar",
+  "lunes-laterales",
+  "lunes-triceps",
+  "martes-jalon",
+  "martes-remo",
+  "martes-facepull",
+  "martes-bayesian",
+  "martes-martillo",
+  "sentadilla",
+  "prensa",
+  "bulgara",
+  "extensiones",
+  "femoral",
+  "gemelo",
+  "jueves-inclinado",
+  "jueves-militar",
+  "jueves-horizontal",
+  "jueves-laterales",
+  "jueves-triceps",
+  "viernes-dominadas",
+  "viernes-remot",
+  "viernes-reverse",
+  "viernes-polea",
+  "viernes-inclinado",
+  "sabado-hipthrust",
+  "sabado-rumano",
+  "sabado-femoral",
+  "sabado-abductores",
+  "sabado-extensiones",
+  "sabado-gemelo"
+];
 
   exercises.forEach(renderExerciseLog);
 });

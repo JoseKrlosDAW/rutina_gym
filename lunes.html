@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lunes | Rutina Gym</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <div class="container">
+    <header class="hero hero-small">
+      <p class="eyebrow">Lunes</p>
+      <h1>Push — Día 1</h1>
+      <p class="hero-text">
+        Día de empuje con mayor protagonismo del pecho. Trabajo principal de press horizontal e inclinado,
+        acompañado de hombro y tríceps.
+      </p>
+
+      <div class="actions">
+        <a class="btn secondary" href="index.html">Volver al inicio</a>
+        <a class="btn" href="#temporizador">Ir al temporizador</a>
+      </div>
+    </header>
+
+    <section class="section card">
+      <h2>Resumen del día</h2>
+      <div class="badges">
+        <span class="badge">Duración: 70-90 min</span>
+        <span class="badge">Énfasis: pecho</span>
+        <span class="badge">RPE general: 8-9</span>
+      </div>
+      <p class="muted" style="margin-top: 12px;">
+        Idea general: priorizar pecho con presses estables y buena técnica, sin descuidar hombro y tríceps.
+      </p>
+    </section>
+
+    <section class="section card">
+      <h2>Calentamiento específico</h2>
+
+      <h3>General</h3>
+      <ul>
+        <li>5-8 minutos de cardio suave</li>
+        <li>Bici, cinta o remo suave</li>
+      </ul>
+
+      <h3 style="margin-top: 18px;">Movilidad y activación</h3>
+      <ul>
+        <li>Movilidad de hombro y escápulas: 1-2 rondas</li>
+        <li>Rotaciones externas con banda: 2 x 15</li>
+        <li>Push-ups inclinadas o press muy ligero: 1-2 series</li>
+      </ul>
+
+      <h3 style="margin-top: 18px;">Aproximación antes del press principal</h3>
+      <ul>
+        <li>2-4 series progresivas con poco peso antes de las series efectivas</li>
+      </ul>
+
+      <div class="note">
+        La idea es llegar al primer press con hombro caliente, escápulas activas y el pecho listo para empujar.
+      </div>
+    </section>
+
+    <section class="section card">
+      <h2>Ejercicios</h2>
+
+      <article class="exercise">
+        <img src="img/lunes/press-banca.gif" alt="Press banca">
+        <div>
+          <h3>1. Press banca</h3>
+          <div class="meta">
+            <span class="pill">3-4 series</span>
+            <span class="pill">6-10 reps</span>
+            <span class="pill">2-3 min</span>
+          </div>
+          <p>
+            Press principal del día. Muy bueno para ganar fuerza y masa en pecho, con bastante apoyo de tríceps y hombro anterior.
+          </p>
+          <div class="note">
+            <strong>Técnica clave:</strong> pies firmes, escápulas retraídas, barra bajando con control hacia la parte media-baja del pecho.
+          </div>
+          <div class="note">
+            <strong>Tip:</strong> mantén tensión en la espalda alta y no pierdas estabilidad al empujar.
+          </div>
+          <div class="warning">
+            <strong>Error común:</strong> abrir demasiado los codos o perder la posición de hombros al bajar.
+          </div>
+
+          <div class="log-box">
+            <h4>Registro</h4>
+            <div class="log-form">
+              <input type="number" id="lunes-banca-peso" placeholder="Peso (kg)" step="0.5">
+              <input type="number" id="lunes-banca-reps" placeholder="Reps">
+              <input type="text" id="lunes-banca-nota" placeholder="Nota rápida">
+            </div>
+
+            <div class="log-actions">
+              <button class="timer-btn primary" onclick="saveExerciseLog('lunes-banca')">Guardar</button>
+              <button class="timer-btn" onclick="clearExerciseLog('lunes-banca')">Borrar</button>
+            </div>
+
+            <div class="saved-log" id="lunes-banca-output">
+              Sin registro guardado todavía.
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <article class="exercise">
+        <img src="img/lunes/press-inclinado.gif" alt="Press inclinado">
+        <div>
+          <h3>2. Press inclinado</h3>
+          <div class="meta">
+            <span class="pill">3 series</span>
+            <span class="pill">8-12 reps</span>
+            <span class="pill">90-120 s</span>
+          </div>
+          <p>
+            Complemento muy bueno para pecho superior y hombro anterior, ideal después del press principal.
+          </p>
+          <div class="note">
+            <strong>Técnica clave:</strong> inclinación moderada, bajada controlada y recorrido limpio sin chocar arriba.
+          </div>
+          <div class="note">
+            <strong>Tip:</strong> piensa en empujar con el pecho, no solo en mover las mancuernas o la barra.
+          </div>
+          <div class="warning">
+            <strong>Error común:</strong> inclinar demasiado el banco y convertirlo casi en un press de hombro.
+          </div>
+
+          <div class="log-box">
+            <h4>Registro</h4>
+            <div class="log-form">
+              <input type="number" id="lunes-inclinado-peso" placeholder="Peso (kg)" step="0.5">
+              <input type="number" id="lunes-inclinado-reps" placeholder="Reps">
+              <input type="text" id="lunes-inclinado-nota" placeholder="Nota rápida">
+            </div>
+
+            <div class="log-actions">
+              <button class="timer-btn primary" onclick="saveExerciseLog('lunes-inclinado')">Guardar</button>
+              <button class="timer-btn" onclick="clearExerciseLog('lunes-inclinado')">Borrar</button>
+            </div>
+
+            <div class="saved-log" id="lunes-inclinado-output">
+              Sin registro guardado todavía.
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <article class="exercise">
+        <img src="img/lunes/press-militar.gif" alt="Press militar">
+        <div>
+          <h3>3. Press militar</h3>
+          <div class="meta">
+            <span class="pill">3 series</span>
+            <span class="pill">8-10 reps</span>
+            <span class="pill">90-120 s</span>
+          </div>
+          <p>
+            Press vertical para deltoide anterior, parte superior del empuje y apoyo de tríceps.
+          </p>
+          <div class="note">
+            <strong>Técnica clave:</strong> abdomen firme, glúteos apretados y trayectoria estable por encima de la cabeza.
+          </div>
+          <div class="note">
+            <strong>Tip:</strong> evita arquear demasiado la lumbar; piensa en apilar costillas y pelvis.
+          </div>
+          <div class="warning">
+            <strong>Error común:</strong> convertir el ejercicio en una especie de press inclinado por falta de estabilidad.
+          </div>
+
+          <div class="log-box">
+            <h4>Registro</h4>
+            <div class="log-form">
+              <input type="number" id="lunes-militar-peso" placeholder="Peso (kg)" step="0.5">
+              <input type="number" id="lunes-militar-reps" placeholder="Reps">
+              <input type="text" id="lunes-militar-nota" placeholder="Nota rápida">
+            </div>
+
+            <div class="log-actions">
+              <button class="timer-btn primary" onclick="saveExerciseLog('lunes-militar')">Guardar</button>
+              <button class="timer-btn" onclick="clearExerciseLog('lunes-militar')">Borrar</button>
+            </div>
+
+            <div class="saved-log" id="lunes-militar-output">
+              Sin registro guardado todavía.
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <article class="exercise">
+        <img src="img/lunes/elevaciones-laterales.gif" alt="Elevaciones laterales">
+        <div>
+          <h3>4. Elevaciones laterales</h3>
+          <div class="meta">
+            <span class="pill">3 series</span>
+            <span class="pill">12-15 reps</span>
+            <span class="pill">60-75 s</span>
+          </div>
+          <p>
+            Trabajo directo de deltoide lateral, importante para dar amplitud al hombro.
+          </p>
+          <div class="note">
+            <strong>Técnica clave:</strong> sube en el plano escapular, con control y sin balanceo del torso.
+          </div>
+          <div class="note">
+            <strong>Tip:</strong> mejor menos peso y más control que mover por inercia.
+          </div>
+          <div class="warning">
+            <strong>Error común:</strong> encoger trapecios o impulsarte con la espalda.
+          </div>
+
+          <div class="log-box">
+            <h4>Registro</h4>
+            <div class="log-form">
+              <input type="number" id="lunes-laterales-peso" placeholder="Peso (kg)" step="0.5">
+              <input type="number" id="lunes-laterales-reps" placeholder="Reps">
+              <input type="text" id="lunes-laterales-nota" placeholder="Nota rápida">
+            </div>
+
+            <div class="log-actions">
+              <button class="timer-btn primary" onclick="saveExerciseLog('lunes-laterales')">Guardar</button>
+              <button class="timer-btn" onclick="clearExerciseLog('lunes-laterales')">Borrar</button>
+            </div>
+
+            <div class="saved-log" id="lunes-laterales-output">
+              Sin registro guardado todavía.
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <article class="exercise">
+        <img src="img/lunes/triceps-overhead.gif" alt="Extensión de tríceps por encima de la cabeza">
+        <div>
+          <h3>5. Extensión de tríceps por encima de la cabeza</h3>
+          <div class="meta">
+            <span class="pill">3 series</span>
+            <span class="pill">10-15 reps</span>
+            <span class="pill">60-75 s</span>
+          </div>
+          <p>
+            Trabajo directo de tríceps con un patrón distinto al del lunes, para variar el estímulo semanal.
+          </p>
+          <div class="note">
+            <strong>Técnica clave:</strong> codos relativamente fijos, recorrido completo y control de la bajada.
+          </div>
+          <div class="note">
+            <strong>Tip:</strong> no hace falta mucho peso; interesa más que el tríceps trabaje limpio.
+          </div>
+          <div class="warning">
+            <strong>Error común:</strong> abrir demasiado los codos o mover todo el cuerpo para completar repeticiones.
+          </div>
+
+          <div class="log-box">
+            <h4>Registro</h4>
+            <div class="log-form">
+              <input type="number" id="jueves-triceps-peso" placeholder="Peso (kg)" step="0.5">
+              <input type="number" id="jueves-triceps-reps" placeholder="Reps">
+              <input type="text" id="jueves-triceps-nota" placeholder="Nota rápida">
+            </div>
+
+            <div class="log-actions">
+              <button class="timer-btn primary" onclick="saveExerciseLog('jueves-triceps')">Guardar</button>
+              <button class="timer-btn" onclick="clearExerciseLog('jueves-triceps')">Borrar</button>
+            </div>
+
+            <div class="saved-log" id="jueves-triceps-output">
+              Sin registro guardado todavía.
+            </div>
+          </div>
+        </div>
+      </article>
+    </section>
+
+    <section class="section card">
+      <h2>Notas del día</h2>
+      <ul>
+        <li>Este día da más protagonismo al pecho, pero sigue sumando buen trabajo para hombro y tríceps.</li>
+        <li>No hace falta vaciarte en todos los presses; interesa mantener calidad y técnica.</li>
+        <li>Cuando completes el rango alto con buena técnica, sube ligeramente el peso la siguiente sesión.</li>
+      </ul>
+    </section>
+
+    <section id="temporizador" class="section card timer-box">
+      <h2>Temporizador de descanso</h2>
+      <p class="muted">Botones rápidos para 60, 90, 120 y 180 segundos.</p>
+
+      <div class="timer-display" id="timer">01:30</div>
+
+      <div class="timer-controls">
+        <button class="timer-btn" onclick="setTimer(60)">60 s</button>
+        <button class="timer-btn" onclick="setTimer(90)">90 s</button>
+        <button class="timer-btn" onclick="setTimer(120)">120 s</button>
+        <button class="timer-btn" onclick="setTimer(180)">180 s</button>
+        <button class="timer-btn primary" onclick="startTimer()">Iniciar</button>
+        <button class="timer-btn" onclick="pauseTimer()">Pausar</button>
+        <button class="timer-btn" onclick="resetTimer()">Reset</button>
+      </div>
+    </section>
+  </div>
+</body>
+</html>

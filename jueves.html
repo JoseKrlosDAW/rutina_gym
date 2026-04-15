@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jueves | Rutina Gym</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <div class="container">
+    <header class="hero hero-small">
+      <p class="eyebrow">Jueves</p>
+      <h1>Push — Día 4</h1>
+      <p class="hero-text">
+        Segundo día de empuje, con más sesgo a hombro y tríceps, pero manteniendo también trabajo suficiente de pecho.
+      </p>
+
+      <div class="actions">
+        <a class="btn secondary" href="index.html">Volver al inicio</a>
+        <a class="btn" href="#temporizador">Ir al temporizador</a>
+      </div>
+    </header>
+
+    <section class="section card">
+      <h2>Resumen del día</h2>
+      <div class="badges">
+        <span class="badge">Duración: 70-90 min</span>
+        <span class="badge">Énfasis: hombro + tríceps</span>
+        <span class="badge">RPE general: 8-9</span>
+      </div>
+      <p class="muted" style="margin-top: 12px;">
+        Idea general: seguir sumando volumen de empuje cambiando el sesgo del día, para repartir mejor la fatiga semanal.
+      </p>
+    </section>
+
+    <section class="section card">
+      <h2>Calentamiento específico</h2>
+
+      <h3>General</h3>
+      <ul>
+        <li>5-8 minutos de cardio suave</li>
+        <li>Bici, cinta o remo suave</li>
+      </ul>
+
+      <h3 style="margin-top: 18px;">Movilidad y activación</h3>
+      <ul>
+        <li>Movilidad de hombro y escápulas: 1-2 rondas</li>
+        <li>Rotaciones externas con banda: 2 x 15</li>
+        <li>Press muy ligero o elevaciones suaves: 1-2 series</li>
+      </ul>
+
+      <h3 style="margin-top: 18px;">Aproximación antes del primer press</h3>
+      <ul>
+        <li>2-4 series progresivas con poco peso antes de las series efectivas</li>
+      </ul>
+
+      <div class="note">
+        Busca llegar al primer ejercicio con los hombros calientes y estables, no fatigados.
+      </div>
+    </section>
+
+    <section class="section card">
+      <h2>Ejercicios</h2>
+
+      <article class="exercise">
+        <img src="img/jueves/press-inclinado.gif" alt="Press inclinado">
+        <div>
+          <h3>1. Press inclinado</h3>
+          <div class="meta">
+            <span class="pill">3-4 series</span>
+            <span class="pill">6-10 reps</span>
+            <span class="pill">2 min</span>
+          </div>
+          <p>
+            Primer press del día, útil para pecho superior y hombro anterior.
+          </p>
+          <div class="note">
+            <strong>Técnica clave:</strong> inclinación moderada, recorrido controlado y estabilidad escapular.
+          </div>
+          <div class="note">
+            <strong>Tip:</strong> no conviertas el gesto en un press de hombro puro por exceso de inclinación.
+          </div>
+          <div class="warning">
+            <strong>Error común:</strong> perder tensión abajo o acortar demasiado el recorrido.
+          </div>
+
+          <div class="log-box">
+            <h4>Registro</h4>
+            <div class="log-form">
+              <input type="number" id="jueves-inclinado-peso" placeholder="Peso (kg)" step="0.5">
+              <input type="number" id="jueves-inclinado-reps" placeholder="Reps">
+              <input type="text" id="jueves-inclinado-nota" placeholder="Nota rápida">
+            </div>
+
+            <div class="log-actions">
+              <button class="timer-btn primary" onclick="saveExerciseLog('jueves-inclinado')">Guardar</button>
+              <button class="timer-btn" onclick="clearExerciseLog('jueves-inclinado')">Borrar</button>
+            </div>
+
+            <div class="saved-log" id="jueves-inclinado-output">
+              Sin registro guardado todavía.
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <article class="exercise">
+        <img src="img/jueves/press-militar.gif" alt="Press militar">
+        <div>
+          <h3>2. Press militar</h3>
+          <div class="meta">
+            <span class="pill">3 series</span>
+            <span class="pill">8-10 reps</span>
+            <span class="pill">90-120 s</span>
+          </div>
+          <p>
+            Segundo gran press del día, con protagonismo para hombro anterior y tríceps.
+          </p>
+          <div class="note">
+            <strong>Técnica clave:</strong> torso estable, abdomen firme y trayectoria vertical limpia.
+          </div>
+          <div class="note">
+            <strong>Tip:</strong> prioriza control del cuerpo antes que cargar de más.
+          </div>
+          <div class="warning">
+            <strong>Error común:</strong> arquear la lumbar para sacar repeticiones.
+          </div>
+
+          <div class="log-box">
+            <h4>Registro</h4>
+            <div class="log-form">
+              <input type="number" id="jueves-militar-peso" placeholder="Peso (kg)" step="0.5">
+              <input type="number" id="jueves-militar-reps" placeholder="Reps">
+              <input type="text" id="jueves-militar-nota" placeholder="Nota rápida">
+            </div>
+
+            <div class="log-actions">
+              <button class="timer-btn primary" onclick="saveExerciseLog('jueves-militar')">Guardar</button>
+              <button class="timer-btn" onclick="clearExerciseLog('jueves-militar')">Borrar</button>
+            </div>
+
+            <div class="saved-log" id="jueves-militar-output">
+              Sin registro guardado todavía.
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <article class="exercise">
+        <img src="img/jueves/press-horizontal-maquina.gif" alt="Press horizontal en máquina">
+        <div>
+          <h3>3. Press horizontal en máquina o mancuerna</h3>
+          <div class="meta">
+            <span class="pill">3 series</span>
+            <span class="pill">8-12 reps</span>
+            <span class="pill">90 s</span>
+          </div>
+          <p>
+            Press más estable para seguir sumando trabajo de pecho sin tanta demanda técnica.
+          </p>
+          <div class="note">
+            <strong>Técnica clave:</strong> controla la bajada, pecho arriba y empuje estable sin perder posición.
+          </div>
+          <div class="note">
+            <strong>Tip:</strong> busca un recorrido sólido y sensación muscular limpia.
+          </div>
+          <div class="warning">
+            <strong>Error común:</strong> acortar el movimiento por meter demasiado peso.
+          </div>
+
+          <div class="log-box">
+            <h4>Registro</h4>
+            <div class="log-form">
+              <input type="number" id="jueves-horizontal-peso" placeholder="Peso (kg)" step="0.5">
+              <input type="number" id="jueves-horizontal-reps" placeholder="Reps">
+              <input type="text" id="jueves-horizontal-nota" placeholder="Nota rápida">
+            </div>
+
+            <div class="log-actions">
+              <button class="timer-btn primary" onclick="saveExerciseLog('jueves-horizontal')">Guardar</button>
+              <button class="timer-btn" onclick="clearExerciseLog('jueves-horizontal')">Borrar</button>
+            </div>
+
+            <div class="saved-log" id="jueves-horizontal-output">
+              Sin registro guardado todavía.
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <article class="exercise">
+        <img src="img/jueves/elevaciones-laterales.gif" alt="Elevaciones laterales">
+        <div>
+          <h3>4. Elevaciones laterales</h3>
+          <div class="meta">
+            <span class="pill">3 series</span>
+            <span class="pill">12-15 reps</span>
+            <span class="pill">60-75 s</span>
+          </div>
+          <p>
+            Trabajo directo de deltoide lateral para mantener amplitud y equilibrio del hombro.
+          </p>
+          <div class="note">
+            <strong>Técnica clave:</strong> controla el movimiento y evita impulso del torso.
+          </div>
+          <div class="note">
+            <strong>Tip:</strong> mantén la tensión durante toda la serie.
+          </div>
+          <div class="warning">
+            <strong>Error común:</strong> elevar encogiendo trapecio o lanzar la mancuerna.
+          </div>
+
+          <div class="log-box">
+            <h4>Registro</h4>
+            <div class="log-form">
+              <input type="number" id="jueves-laterales-peso" placeholder="Peso (kg)" step="0.5">
+              <input type="number" id="jueves-laterales-reps" placeholder="Reps">
+              <input type="text" id="jueves-laterales-nota" placeholder="Nota rápida">
+            </div>
+
+            <div class="log-actions">
+              <button class="timer-btn primary" onclick="saveExerciseLog('jueves-laterales')">Guardar</button>
+              <button class="timer-btn" onclick="clearExerciseLog('jueves-laterales')">Borrar</button>
+            </div>
+
+            <div class="saved-log" id="jueves-laterales-output">
+              Sin registro guardado todavía.
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <article class="exercise">
+        <img src="img/jueves/triceps-overhead.gif" alt="Extensión de tríceps por encima de la cabeza">
+        <div>
+          <h3>5. Extensión de tríceps por encima de la cabeza</h3>
+          <div class="meta">
+            <span class="pill">3 series</span>
+            <span class="pill">10-15 reps</span>
+            <span class="pill">60-75 s</span>
+          </div>
+          <p>
+            Trabajo directo de tríceps con un patrón distinto al del lunes, para variar el estímulo semanal.
+          </p>
+          <div class="note">
+            <strong>Técnica clave:</strong> codos relativamente fijos, recorrido completo y control de la bajada.
+          </div>
+          <div class="note">
+            <strong>Tip:</strong> no hace falta mucho peso; interesa más que el tríceps trabaje limpio.
+          </div>
+          <div class="warning">
+            <strong>Error común:</strong> abrir demasiado los codos o mover todo el cuerpo para completar repeticiones.
+          </div>
+
+          <div class="log-box">
+            <h4>Registro</h4>
+            <div class="log-form">
+              <input type="number" id="jueves-triceps-peso" placeholder="Peso (kg)" step="0.5">
+              <input type="number" id="jueves-triceps-reps" placeholder="Reps">
+              <input type="text" id="jueves-triceps-nota" placeholder="Nota rápida">
+            </div>
+
+            <div class="log-actions">
+              <button class="timer-btn primary" onclick="saveExerciseLog('jueves-triceps')">Guardar</button>
+              <button class="timer-btn" onclick="clearExerciseLog('jueves-triceps')">Borrar</button>
+            </div>
+
+            <div class="saved-log" id="jueves-triceps-output">
+              Sin registro guardado todavía.
+            </div>
+          </div>
+        </div>
+      </article>
+    </section>
+
+    <section class="section card">
+      <h2>Notas del día</h2>
+      <ul>
+        <li>Este día sigue siendo de empuje, pero con más sesgo a hombro y tríceps que el lunes.</li>
+        <li>Mantén calidad en los presses y usa las elevaciones laterales y tríceps para rematar bien.</li>
+        <li>Cuando completes el rango alto con buena técnica, sube ligeramente el peso la próxima sesión.</li>
+      </ul>
+    </section>
+
+    <section id="temporizador" class="section card timer-box">
+      <h2>Temporizador de descanso</h2>
+      <p class="muted">Botones rápidos para 60, 90, 120 y 180 segundos.</p>
+
+      <div class="timer-display" id="timer">01:30</div>
+
+      <div class="timer-controls">
+        <button class="timer-btn" onclick="setTimer(60)">60 s</button>
+        <button class="timer-btn" onclick="setTimer(90)">90 s</button>
+        <button class="timer-btn" onclick="setTimer(120)">120 s</button>
+        <button class="timer-btn" onclick="setTimer(180)">180 s</button>
+        <button class="timer-btn primary" onclick="startTimer()">Iniciar</button>
+        <button class="timer-btn" onclick="pauseTimer()">Pausar</button>
+        <button class="timer-btn" onclick="resetTimer()">Reset</button>
+      </div>
+    </section>
+  </div>
+</body>
+</html>

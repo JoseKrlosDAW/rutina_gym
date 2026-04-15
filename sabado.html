@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sábado | Rutina Gym</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <div class="container">
+    <header class="hero hero-small">
+      <p class="eyebrow">Sábado</p>
+      <h1>Pierna — Día 2</h1>
+      <p class="hero-text">
+        Dominante de cadera. Día enfocado en glúteos e isquios, con hip thrust como ejercicio principal,
+        trabajo de bisagra de cadera, femoral, glúteo medio, un recordatorio ligero de cuádriceps y gemelo sentado.
+      </p>
+
+      <div class="actions">
+        <a class="btn secondary" href="index.html">Volver al inicio</a>
+        <a class="btn" href="#temporizador">Ir al temporizador</a>
+      </div>
+    </header>
+
+    <section class="section card">
+      <h2>Resumen del día</h2>
+      <div class="badges">
+        <span class="badge">Duración: 75-95 min</span>
+        <span class="badge">Énfasis: glúteos + isquios</span>
+        <span class="badge">RPE general: 8-9</span>
+      </div>
+      <p class="muted" style="margin-top: 12px;">
+        Idea general: priorizar extensión de cadera, trabajo de femoral y glúteo con buena técnica,
+        y añadir un pequeño toque de cuádriceps para que la semana quede más equilibrada.
+      </p>
+    </section>
+
+    <section class="section card">
+      <h2>Calentamiento específico</h2>
+
+      <h3>General</h3>
+      <ul>
+        <li>5-8 minutos de cardio suave</li>
+        <li>Bici, cinta o elíptica</li>
+      </ul>
+
+      <h3 style="margin-top: 18px;">Activación</h3>
+      <ul>
+        <li>Puente de glúteo sin peso: 2 x 15</li>
+        <li>Movilidad de cadera: 1-2 series por lado</li>
+        <li>Bisagra de cadera sin peso o con mancuerna ligera: 1-2 series</li>
+      </ul>
+
+      <h3 style="margin-top: 18px;">Aproximación antes del hip thrust</h3>
+      <ul>
+        <li>2-3 series progresivas con poco peso antes de las efectivas</li>
+      </ul>
+
+      <div class="note">
+        La idea es llegar al primer ejercicio con glúteo activado, cadera suelta y sensación de control,
+        no fatigarte antes de empezar.
+      </div>
+    </section>
+
+    <section class="section card">
+      <h2>Ejercicios</h2>
+
+      <article class="exercise">
+        <img src="img/sabado/hip-thrust.gif" alt="Hip Thrust">
+        <div>
+          <h3>1. Hip Thrust</h3>
+          <div class="meta">
+            <span class="pill">3-4 series</span>
+            <span class="pill">8-12 reps</span>
+            <span class="pill">2 min</span>
+          </div>
+          <p>
+            Ejercicio principal del día. Muy bueno para cargar glúteo con estabilidad y progresión.
+          </p>
+          <div class="note">
+            <strong>Técnica clave:</strong> barbilla hacia abajo, costillas controladas y empuje fuerte con talones.
+          </div>
+          <div class="note">
+            <strong>Tip:</strong> arriba busca extensión de cadera, no arquear la zona lumbar.
+          </div>
+          <div class="warning">
+            <strong>Error común:</strong> hiperextender la espalda arriba o perder tensión al bajar.
+          </div>
+
+          <div class="log-box">
+            <h4>Registro</h4>
+            <div class="log-form">
+              <input type="number" id="sabado-hipthrust-peso" placeholder="Peso (kg)" step="0.5">
+              <input type="number" id="sabado-hipthrust-reps" placeholder="Reps">
+              <input type="text" id="sabado-hipthrust-nota" placeholder="Nota rápida">
+            </div>
+
+            <div class="log-actions">
+              <button class="timer-btn primary" onclick="saveExerciseLog('sabado-hipthrust')">Guardar</button>
+              <button class="timer-btn" onclick="clearExerciseLog('sabado-hipthrust')">Borrar</button>
+            </div>
+
+            <div class="saved-log" id="sabado-hipthrust-output">
+              Sin registro guardado todavía.
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <article class="exercise">
+        <img src="img/sabado/peso-muerto-rumano.gif" alt="Peso muerto rumano">
+        <div>
+          <h3>2. Peso muerto rumano</h3>
+          <div class="meta">
+            <span class="pill">3 series</span>
+            <span class="pill">8-10 reps</span>
+            <span class="pill">2 min</span>
+          </div>
+          <p>
+            Ejercicio clave de bisagra de cadera para cargar isquios y glúteo con mucho trabajo en estiramiento.
+          </p>
+          <div class="note">
+            <strong>Técnica clave:</strong> lleva la cadera hacia atrás, espalda neutra y barra o mancuernas pegadas al cuerpo.
+          </div>
+          <div class="note">
+            <strong>Tip:</strong> no necesitas doblar mucho las rodillas; piensa en empujar la cadera atrás.
+          </div>
+          <div class="warning">
+            <strong>Error común:</strong> redondear la espalda o convertirlo en una sentadilla rara.
+          </div>
+
+          <div class="log-box">
+            <h4>Registro</h4>
+            <div class="log-form">
+              <input type="number" id="sabado-rumano-peso" placeholder="Peso (kg)" step="0.5">
+              <input type="number" id="sabado-rumano-reps" placeholder="Reps">
+              <input type="text" id="sabado-rumano-nota" placeholder="Nota rápida">
+            </div>
+
+            <div class="log-actions">
+              <button class="timer-btn primary" onclick="saveExerciseLog('sabado-rumano')">Guardar</button>
+              <button class="timer-btn" onclick="clearExerciseLog('sabado-rumano')">Borrar</button>
+            </div>
+
+            <div class="saved-log" id="sabado-rumano-output">
+              Sin registro guardado todavía.
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <article class="exercise">
+        <img src="img/sabado/curl-femoral.gif" alt="Curl femoral">
+        <div>
+          <h3>3. Curl femoral</h3>
+          <div class="meta">
+            <span class="pill">3 series</span>
+            <span class="pill">10-15 reps</span>
+            <span class="pill">60-90 s</span>
+          </div>
+          <p>
+            Aislamiento directo para femoral, muy útil para completar el trabajo dominante de cadera.
+          </p>
+          <div class="note">
+            <strong>Técnica clave:</strong> controla subida y bajada, sin tirar con inercias.
+          </div>
+          <div class="note">
+            <strong>Tip:</strong> busca recorrido limpio y tensión continua más que mover mucho peso.
+          </div>
+          <div class="warning">
+            <strong>Error común:</strong> hacer el movimiento demasiado rápido o perder el control al bajar.
+          </div>
+
+          <div class="log-box">
+            <h4>Registro</h4>
+            <div class="log-form">
+              <input type="number" id="sabado-femoral-peso" placeholder="Peso (kg)" step="0.5">
+              <input type="number" id="sabado-femoral-reps" placeholder="Reps">
+              <input type="text" id="sabado-femoral-nota" placeholder="Nota rápida">
+            </div>
+
+            <div class="log-actions">
+              <button class="timer-btn primary" onclick="saveExerciseLog('sabado-femoral')">Guardar</button>
+              <button class="timer-btn" onclick="clearExerciseLog('sabado-femoral')">Borrar</button>
+            </div>
+
+            <div class="saved-log" id="sabado-femoral-output">
+              Sin registro guardado todavía.
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <article class="exercise">
+        <img src="img/sabado/abductores.gif" alt="Abductores">
+        <div>
+          <h3>4. Abductores</h3>
+          <div class="meta">
+            <span class="pill">2-3 series</span>
+            <span class="pill">12-15 reps</span>
+            <span class="pill">60 s</span>
+          </div>
+          <p>
+            Trabajo de glúteo medio, útil para estabilidad de cadera y complemento del día.
+          </p>
+          <div class="note">
+            <strong>Técnica clave:</strong> controla tanto la apertura como la vuelta, sin golpear las placas.
+          </div>
+          <div class="note">
+            <strong>Tip:</strong> busca sentir la zona lateral del glúteo, no solo mover la máquina.
+          </div>
+          <div class="warning">
+            <strong>Error común:</strong> hacer repeticiones cortas y rápidas sin tensión real.
+          </div>
+
+          <div class="log-box">
+            <h4>Registro</h4>
+            <div class="log-form">
+              <input type="number" id="sabado-abductores-peso" placeholder="Peso (kg)" step="0.5">
+              <input type="number" id="sabado-abductores-reps" placeholder="Reps">
+              <input type="text" id="sabado-abductores-nota" placeholder="Nota rápida">
+            </div>
+
+            <div class="log-actions">
+              <button class="timer-btn primary" onclick="saveExerciseLog('sabado-abductores')">Guardar</button>
+              <button class="timer-btn" onclick="clearExerciseLog('sabado-abductores')">Borrar</button>
+            </div>
+
+            <div class="saved-log" id="sabado-abductores-output">
+              Sin registro guardado todavía.
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <article class="exercise">
+        <img src="img/sabado/extensiones-cuadriceps.gif" alt="Extensiones de cuádriceps">
+        <div>
+          <h3>5. Extensiones de cuádriceps</h3>
+          <div class="meta">
+            <span class="pill">2 series</span>
+            <span class="pill">12-15 reps</span>
+            <span class="pill">60 s</span>
+          </div>
+          <p>
+            Recordatorio ligero de cuádriceps para equilibrar mejor el trabajo semanal sin cambiar el enfoque dominante de cadera del día.
+          </p>
+          <div class="note">
+            <strong>Técnica clave:</strong> sube controlando, aprieta arriba y baja lento sin despegarte del respaldo.
+          </div>
+          <div class="note">
+            <strong>Tip:</strong> aquí no hace falta ir pesado; interesa más sentir bien el cuádriceps y sumar trabajo limpio.
+          </div>
+          <div class="warning">
+            <strong>Error común:</strong> usar inercias, balancear el cuerpo o tirar el peso al bajar.
+          </div>
+
+          <div class="log-box">
+            <h4>Registro</h4>
+            <div class="log-form">
+              <input type="number" id="sabado-extensiones-peso" placeholder="Peso (kg)" step="0.5">
+              <input type="number" id="sabado-extensiones-reps" placeholder="Reps">
+              <input type="text" id="sabado-extensiones-nota" placeholder="Nota rápida">
+            </div>
+
+            <div class="log-actions">
+              <button class="timer-btn primary" onclick="saveExerciseLog('sabado-extensiones')">Guardar</button>
+              <button class="timer-btn" onclick="clearExerciseLog('sabado-extensiones')">Borrar</button>
+            </div>
+
+            <div class="saved-log" id="sabado-extensiones-output">
+              Sin registro guardado todavía.
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <article class="exercise">
+        <img src="img/sabado/gemelo-sentado.gif" alt="Gemelo sentado">
+        <div>
+          <h3>6. Gemelo sentado</h3>
+          <div class="meta">
+            <span class="pill">3-4 series</span>
+            <span class="pill">12-20 reps</span>
+            <span class="pill">45-60 s</span>
+          </div>
+          <p>
+            Trabajo de gemelo sentado para completar la pierna, con énfasis mayor en sóleo.
+          </p>
+          <div class="note">
+            <strong>Técnica clave:</strong> baja lento, busca estiramiento abajo y sube con intención.
+          </div>
+          <div class="note">
+            <strong>Tip:</strong> pausa breve abajo para no rebotar y sacar más trabajo real.
+          </div>
+          <div class="warning">
+            <strong>Error común:</strong> hacer medio recorrido o ir demasiado rápido.
+          </div>
+
+          <div class="log-box">
+            <h4>Registro</h4>
+            <div class="log-form">
+              <input type="number" id="sabado-gemelo-peso" placeholder="Peso (kg)" step="0.5">
+              <input type="number" id="sabado-gemelo-reps" placeholder="Reps">
+              <input type="text" id="sabado-gemelo-nota" placeholder="Nota rápida">
+            </div>
+
+            <div class="log-actions">
+              <button class="timer-btn primary" onclick="saveExerciseLog('sabado-gemelo')">Guardar</button>
+              <button class="timer-btn" onclick="clearExerciseLog('sabado-gemelo')">Borrar</button>
+            </div>
+
+            <div class="saved-log" id="sabado-gemelo-output">
+              Sin registro guardado todavía.
+            </div>
+          </div>
+        </div>
+      </article>
+    </section>
+
+    <section class="section card">
+      <h2>Notas del día</h2>
+      <ul>
+        <li>Este día complementa al miércoles: menos dominante de rodilla y más dominante de cadera.</li>
+        <li>Prioriza control en hip thrust y peso muerto rumano; ahí está gran parte del valor del entreno.</li>
+        <li>La extensión de cuádriceps aquí es solo un recordatorio ligero para equilibrar la semana.</li>
+        <li>Si completas el rango alto con buena técnica, sube ligeramente el peso la próxima sesión.</li>
+      </ul>
+    </section>
+
+    <section id="temporizador" class="section card timer-box">
+      <h2>Temporizador de descanso</h2>
+      <p class="muted">Botones rápidos para 60, 90, 120 y 180 segundos.</p>
+
+      <div class="timer-display" id="timer">01:30</div>
+
+      <div class="timer-controls">
+        <button class="timer-btn" onclick="setTimer(60)">60 s</button>
+        <button class="timer-btn" onclick="setTimer(90)">90 s</button>
+        <button class="timer-btn" onclick="setTimer(120)">120 s</button>
+        <button class="timer-btn" onclick="setTimer(180)">180 s</button>
+        <button class="timer-btn primary" onclick="startTimer()">Iniciar</button>
+        <button class="timer-btn" onclick="pauseTimer()">Pausar</button>
+        <button class="timer-btn" onclick="resetTimer()">Reset</button>
+      </div>
+    </section>
+  </div>
+</body>
+</html>
