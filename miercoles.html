@@ -70,31 +70,49 @@
     <section class="section card">
       <h2>Ejercicios</h2>
 
-      <article class="exercise">
-        <img src="img/miercoles/sentadilla-barra.gif" alt="Sentadilla con barra">
-        <div>
-          <h3>1. Sentadilla con barra</h3>
-          <div class="meta">
-            <span class="pill">3-4 series</span>
-            <span class="pill">6-10 reps</span>
-            <span class="pill">2-3 min</span>
-          </div>
-          <p>
-            El básico principal del día. Ejercicio clave para ganar fuerza y masa muscular en pierna.
-          </p>
-          <div class="note">
-            <strong>Técnica clave:</strong> pies firmes, torso lo más vertical posible dentro de tu mecánica,
-            bajada controlada y buena profundidad si puedes mantener postura.
-          </div>
-          <div class="note">
-            <strong>Tip:</strong> busca que el cuádriceps trabaje en estiramiento, no solo mover peso.
-          </div>
-          <div class="warning">
-            <strong>Error común:</strong> inclinar demasiado el torso, perder estabilidad en los pies
-            o subir con la cadera antes que con el pecho.
-          </div>
-        </div>
-      </article>
+<article class="exercise">
+  <img src="img/miercoles/sentadilla-barra.gif" alt="Sentadilla con barra">
+  <div>
+    <h3>1. Sentadilla con barra</h3>
+    <div class="meta">
+      <span class="pill">3-4 series</span>
+      <span class="pill">6-10 reps</span>
+      <span class="pill">2-3 min</span>
+    </div>
+    <p>
+      El básico principal del día. Ejercicio clave para ganar fuerza y masa muscular en pierna.
+    </p>
+    <div class="note">
+      <strong>Técnica clave:</strong> pies firmes, torso lo más vertical posible dentro de tu mecánica,
+      bajada controlada y buena profundidad si puedes mantener postura.
+    </div>
+    <div class="note">
+      <strong>Tip:</strong> busca que el cuádriceps trabaje en estiramiento, no solo mover peso.
+    </div>
+    <div class="warning">
+      <strong>Error común:</strong> inclinar demasiado el torso, perder estabilidad en los pies
+      o subir con la cadera antes que con el pecho.
+    </div>
+
+    <div class="log-box">
+      <h4>Registro</h4>
+      <div class="log-form">
+        <input type="number" id="sentadilla-peso" placeholder="Peso (kg)" step="0.5">
+        <input type="number" id="sentadilla-reps" placeholder="Reps">
+        <input type="text" id="sentadilla-nota" placeholder="Nota rápida">
+      </div>
+
+      <div class="log-actions">
+        <button class="timer-btn primary" onclick="saveExerciseLog('sentadilla')">Guardar</button>
+        <button class="timer-btn" onclick="clearExerciseLog('sentadilla')">Borrar</button>
+      </div>
+
+      <div class="saved-log" id="sentadilla-output">
+        Sin registro guardado todavía.
+      </div>
+    </div>
+  </div>
+</article>
 
       <article class="exercise">
         <img src="img/miercoles/prensa.gif" alt="Prensa de piernas">

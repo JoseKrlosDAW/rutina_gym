@@ -243,3 +243,59 @@ li + li {
     padding: 22px;
   }
 }
+
+.log-box {
+  margin-top: 14px;
+  padding: 14px;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid var(--border);
+}
+
+.log-box h4 {
+  margin-bottom: 10px;
+  font-size: 1rem;
+}
+
+.log-form {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+.log-form input {
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  background: var(--panel-2);
+  color: var(--text);
+  font: inherit;
+}
+
+.log-form input::placeholder {
+  color: var(--muted);
+}
+
+.log-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 12px;
+}
+
+.saved-log {
+  margin-top: 12px;
+  padding: 12px;
+  border-radius: 12px;
+  background: rgba(105, 183, 255, 0.08);
+  border-left: 4px solid var(--accent);
+  color: var(--text);
+  font-size: 0.95rem;
+}
+
+@media (max-width: 700px) {
+  .log-form {
+    grid-template-columns: 1fr;
+  }
+}

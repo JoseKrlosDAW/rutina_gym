@@ -47,4 +47,83 @@ function resetTimer() {
   updateDisplay();
 }
 
-document.addEventListener("DOMContentLoaded", updateDisplay);
+function saveExerciseLog(exerciseKey) {
+  const pesoInput = document.getElementById(`${exerciseKey}-peso`);
+  const repsInput = document.getElementById(`${exerciseKey}-reps`);
+  const notaInput = document.getElementById(`${exerciseKey}-nota`);
+  const output = document.getElementById(`${exerciseKey}-output`);
+
+  if (!pesoInput || !repsInput || !notaInput || !output) return;
+
+  const data = {
+    peso: pesoInput.value.trim(),
+    reps: repsInput.value.trim(),
+    nota: notaInput.value.trim(),
+    fecha: new Date().toLocaleDateString("es-ES")
+  };
+
+  localStorage.setItem(`gym-${exerciseKey}`, JSON.stringify(data));
+  renderExerciseLog(exerciseKey);
+}
+
+function renderExerciseLog(exerciseKey) {
+  const output = document.getElementById(`${exerciseKey}-output`);
+  if (!output) return;
+
+  const saved = localStorage.getItem(`gym-${exerciseKey}`);
+
+  if (!saved) {
+    output.textContent = "Sin registro guardado todavía.";
+    return;
+  }
+
+  const data = JSON.parse(saved);
+
+  output.innerHTML = `
+    <strong>Último registro:</strong><br>
+    Peso: ${data.peso || "-"} kg<br>
+    Reps: ${data.reps || "-"}<br>
+    Nota: ${data.nota || "-"}<br>
+    Fecha: ${data.fecha || "-"}
+  `;
+
+  const pesoInput = document.getElementById(`${exerciseKey}-peso`);
+  const repsInput = document.getElementById(`${exerciseKey}-reps`);
+  const notaInput = document.getElementById(`${exerciseKey}-nota`);
+
+  if (pesoInput) pesoInput.value = data.peso || "";
+  if (repsInput) repsInput.value = data.reps || "";
+  if (notaInput) notaInput.value = data.nota || "";
+}
+
+function clearExerciseLog(exerciseKey) {
+  localStorage.removeItem(`gym-${exerciseKey}`);
+
+  const pesoInput = document.getElementById(`${exerciseKey}-peso`);
+  const repsInput = document.getElementById(`${exerciseKey}-reps`);
+  const notaInput = document.getElementById(`${exerciseKey}-nota`);
+  const output = document.getElementById(`${exerciseKey}-output`);
+
+  if (pesoInput) pesoInput.value = "";
+  if (repsInput) repsInput.value = "";
+  if (notaInput) notaInput.value = "";
+
+  if (output) {
+    output.textContent = "Sin registro guardado todavía.";
+  }
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+  updateDisplay();
+
+  const exercises = [
+    "sentadilla",
+    "prensa",
+    "bulgara",
+    "extensiones",
+    "aductores",
+    "gemelo"
+  ];
+
+  exercises.forEach(renderExerciseLog);
+});
